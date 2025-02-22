@@ -1,0 +1,20 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}

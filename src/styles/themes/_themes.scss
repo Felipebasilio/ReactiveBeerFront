@@ -1,0 +1,11 @@
+@import "light";
+@import "dark";
+
+// Aplica o tema correto no HTML dinamicamente
+body.theme-light {
+  @extend .theme-light;
+}
+
+body.theme-dark {
+  @extend .theme-dark;
+}

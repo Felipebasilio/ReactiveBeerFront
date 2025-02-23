@@ -87,8 +87,16 @@
 .p-4 { @extend .px-4; @extend .py-4; }
 .p-5 { @extend .px-5; @extend .py-5; }
 
+.w-100 { width: 100%; }
+
 
 // Flexbox helpers
-.flex { display: flex; }
+.d-flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
-.flex-column { display: flex; flex-direction: column; }
+
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.align-center { align-items: center; }

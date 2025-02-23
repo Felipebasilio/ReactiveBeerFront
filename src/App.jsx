@@ -1,10 +1,10 @@
 import "./App.scss";
-import UserAvatar from "./components/UserAvatar/UserAvatar";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div className="app">
-      <UserAvatar label="teste" />
+    <div className="d-flex flex-column app">
+      <NavBar label="teste" />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ThemeSwitcher = () => {
+function ThemeSwitcher() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "theme-light");
 
   useEffect(() => {

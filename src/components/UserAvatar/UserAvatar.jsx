@@ -1,7 +1,7 @@
 import "./UserAvatar.scss";
 import UserProfileImg from "@assets/user-profile-image.jpg";
 
-const UserAvatar = () => {
+function UserAvatar() {
   return (
     <a href="" className="user-avatar">
       <img src={UserProfileImg} alt="" />

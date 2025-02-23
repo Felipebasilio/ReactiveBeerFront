@@ -1,10 +1,11 @@
 import "./App.scss";
-import NavBar from "./components/NavBar/NavBar";
+import { NavBar, ProductListContainer } from "@components";
 
 function App() {
   return (
-    <div className="d-flex flex-column app">
-      <NavBar label="teste" />
+    <div className="d-flex gap-4 flex-column app">
+      <NavBar/>
+      <ProductListContainer />
     </div>
   );
 }

@@ -1,13 +1,12 @@
-import MenuButton from "@components/MenuButton/MenuButton";
-import UserAvatar from "@components/UserAvatar/UserAvatar";
+import { UserAvatar, MenuButton } from "@components";
 import "./NavBar.scss";
 
-const NavBar = () => {
+function NavBar() {
   return (
-    <dib className="d-flex justify-between w-100 nav-bar">
+    <div className="d-flex justify-between w-100 nav-bar">
       <MenuButton />
       <UserAvatar />
-    </dib>
+    </div>
   );
 };
 

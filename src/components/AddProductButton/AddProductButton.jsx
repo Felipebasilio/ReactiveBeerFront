@@ -1,15 +1,15 @@
-import "./MenuButton.scss";
+import "./AddProductButton.scss";
 import { Button } from "@components";
-import MenuIcon from "@assets/MenuIcon.svg";
+import AddIcon from "@assets/AddIcon.svg";
 
-function MenuButton() {
+function AddProductButton() {
   return (
-    <div className="menu-button">
+    <div className="add-button">
       <Button>
         <a href="">
           <img
             className=""
-            src={MenuIcon}
+            src={AddIcon}
             alt="My Icon"
             width={24}
             height={24}
@@ -20,4 +20,4 @@ function MenuButton() {
   );
 };
 
-export default MenuButton;
+export default AddProductButton;

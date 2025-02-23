@@ -1,10 +1,10 @@
 import "./App.scss";
-import MenuButton from "./components/MenuButton/MenuButton";
+import UserAvatar from "./components/UserAvatar/UserAvatar";
 
 function App() {
   return (
     <div className="app">
-      <MenuButton label="teste" />
+      <UserAvatar label="teste" />
     </div>
   );
 }

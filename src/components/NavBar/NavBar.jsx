@@ -5,11 +5,11 @@ import "./NavBar.scss";
 function NavBar({ pageType = "productDetails" }) {
   const navConfig = {
     productList: [<MenuButton key="menu" />, <UserAvatar key="avatar" />],
-    productDetails: [<BackButton key="back" />, <OptionsButton key="avatar" />],
+    productDetails: [<BackButton key="back" />, <p key="nav-bar-page-title" className="page-title">Detail</p>,<OptionsButton key="avatar" />],
   };
 
   return (
-    <div className="d-flex justify-between w-100 nav-bar">
+    <div className="d-flex justify-between align-center w-100 nav-bar">
       {navConfig[pageType] || navConfig.productList}
     </div>
   );

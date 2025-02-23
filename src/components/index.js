@@ -11,3 +11,4 @@ export { default as AddProductButton } from "./AddProductButton/AddProductButton
 export { default as MoneyText } from "./MoneyText/MoneyText";
 export { default as BackButton } from "./BackButton/BackButton";
 export { default as OptionsButton } from "./OptionsButton/OptionsButton";
+export { default as ProductDetailsContainer } from "./ProductDetailsContainer/ProductDetailsContainer";

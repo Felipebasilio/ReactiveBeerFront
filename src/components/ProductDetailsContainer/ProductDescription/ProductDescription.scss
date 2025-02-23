@@ -1,0 +1,17 @@
+.product-description {
+  gap: 0.8rem;
+  min-height: 12.5rem;
+
+  .product-description-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+  .product-description-text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    opacity: 0.6;
+  }
+}

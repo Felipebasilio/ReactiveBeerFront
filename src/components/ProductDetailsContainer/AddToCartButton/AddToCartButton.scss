@@ -1,0 +1,9 @@
+.add-to-cart-button {
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 1.2rem;
+  width: 100%;
+
+  button {
+    width: inherit;
+  }
+}

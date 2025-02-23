@@ -1,0 +1,20 @@
+.product-size-option {
+  border-radius: 50%;
+  width: auto;
+  border: 1px solid #969696;
+  border-radius: 2rem ;
+  padding: 0.7rem 1.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  cursor: pointer;
+  
+  p {
+    opacity: 0.6;
+  }
+  
+  .selected {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+}

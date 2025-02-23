@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path"; // Importa o módulo path
+import { fileURLToPath } from "url";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  resolve: {
+    alias: {
+      "@components": path.resolve(path.dirname(fileURLToPath(import.meta.url)), "src/components"),
+      "@assets": path.resolve(path.dirname(fileURLToPath(import.meta.url)), "src/assets"),
+    },
+  },
+});

@@ -1,10 +1,10 @@
-import "./App.css";
-import Button from "./components/Button/Button";
+import "./App.scss";
+import MenuButton from "./components/MenuButton/MenuButton";
 
 function App() {
   return (
-    <div>
-      <Button label="teste" />
+    <div className="app">
+      <MenuButton label="teste" />
     </div>
   );
 }

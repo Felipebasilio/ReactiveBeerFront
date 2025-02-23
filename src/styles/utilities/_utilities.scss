@@ -1,18 +1,91 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
-// Margens e espaçamentos
-.m-1 { margin: 10px; }
-.m-2 { margin: 20px; }
-.m-3 { margin: 30px; }
-.m-4 { margin: 40px; }
-.m-5 { margin: 50px; }
+// Margins
+.mt-1 { margin-top: 0.6rem; }
+.mt-2 { margin-top: 1.2rem; }
+.mt-3 { margin-top: 1.8rem; }
+.mt-4 { margin-top: 2.4rem; }
+.mt-5 { margin-top: 3rem; }
 
-.p-1 { padding: 10px; }
-.p-2 { padding: 20px; }
-.p-3 { padding: 30px; }
-.p-4 { padding: 40px; }
-.p-5 { padding: 50px; }
+.mr-1 { margin-right: 0.6rem; }
+.mr-2 { margin-right: 1.2rem; }
+.mr-3 { margin-right: 1.8rem; }
+.mr-4 { margin-right: 2.4rem; }
+.mr-5 { margin-right: 3rem; }
+
+.mb-1 { margin-bottom: 0.6rem; }
+.mb-2 { margin-bottom: 1.2rem; }
+.mb-3 { margin-bottom: 1.8rem; }
+.mb-4 { margin-bottom: 2.4rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.ml-1 { margin-left: 0.6rem; }
+.ml-2 { margin-left: 1.2rem; }
+.ml-3 { margin-left: 1.8rem; }
+.ml-4 { margin-left: 2.4rem; }
+.ml-5 { margin-left: 3rem; }
+
+.mx-1 { @extend .ml-1; @extend .mr-1; }
+.mx-2 { @extend .ml-2; @extend .mr-2; }
+.mx-3 { @extend .ml-3; @extend .mr-3; }
+.mx-4 { @extend .ml-4; @extend .mr-4; }
+.mx-5 { @extend .ml-5; @extend .mr-5; }
+
+.my-1 { @extend .mt-1; @extend .mb-1; }
+.my-2 { @extend .mt-2; @extend .mb-2; }
+.my-3 { @extend .mt-3; @extend .mb-3; }
+.my-4 { @extend .mt-4; @extend .mb-4; }
+.my-5 { @extend .mt-5; @extend .mb-5; }
+
+.m-1 { @extend .mx-1; @extend .my-1; }
+.m-2 { @extend .mx-2; @extend .my-2; }
+.m-3 { @extend .mx-3; @extend .my-3; }
+.m-4 { @extend .mx-4; @extend .my-4; }
+.m-5 { @extend .mx-5; @extend .my-5; }
+
+// Paddings
+.pt-1 { padding-top: 0.6rem; }
+.pt-2 { padding-top: 1.2rem; }
+.pt-3 { padding-top: 1.8rem; }
+.pt-4 { padding-top: 2.4rem; }
+.pt-5 { padding-top: 3rem; }
+
+.pr-1 { padding-right: 0.6rem; }
+.pr-2 { padding-right: 1.2rem; }
+.pr-3 { padding-right: 1.8rem; }
+.pr-4 { padding-right: 2.4rem; }
+.pr-5 { padding-right: 3rem; }
+
+.pb-1 { padding-bottom: 0.6rem; }
+.pb-2 { padding-bottom: 1.2rem; }
+.pb-3 { padding-bottom: 1.8rem; }
+.pb-4 { padding-bottom: 2.4rem; }
+.pb-5 { padding-bottom: 3rem; }
+
+.pl-1 { padding-left: 0.6rem; }
+.pl-2 { padding-left: 1.2rem; }
+.pl-3 { padding-left: 1.8rem; }
+.pl-4 { padding-left: 2.4rem; }
+.pl-5 { padding-left: 3rem; }
+
+.px-1 { @extend .pl-1; @extend .pr-1; }
+.px-2 { @extend .pl-2; @extend .pr-2; }
+.px-3 { @extend .pl-3; @extend .pr-3; }
+.px-4 { @extend .pl-4; @extend .pr-4; }
+.px-5 { @extend .pl-5; @extend .pr-5; }
+
+.py-1 { @extend .pt-1; @extend .pb-1; }
+.py-2 { @extend .pt-2; @extend .pb-2; }
+.py-3 { @extend .pt-3; @extend .pb-3; }
+.py-4 { @extend .pt-4; @extend .pb-4; }
+.py-5 { @extend .pt-5; @extend .pb-5; }
+
+.p-1 { @extend .px-1; @extend .py-1; }
+.p-2 { @extend .px-2; @extend .py-2; }
+.p-3 { @extend .px-3; @extend .py-3; }
+.p-4 { @extend .px-4; @extend .py-4; }
+.p-5 { @extend .px-5; @extend .py-5; }
 
 
 // Flexbox helpers

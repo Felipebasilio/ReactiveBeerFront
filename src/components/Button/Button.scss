@@ -5,7 +5,6 @@
   text-align: inherit;
   background: none;
   box-shadow: none;
-  padding: 0;
   cursor: pointer;
   border: none;
   color: inherit;
@@ -15,7 +14,6 @@
 .btn {
   @extend .reset-btn;
   font-size: 1.6rem;
-  padding: 1.9rem;
   background-color: var(--button-background-color);
   color: var(--button-color);
   line-height: 1.6rem;
@@ -24,9 +22,10 @@
   justify-content: center;
   display: flex;
   align-items: center;
+  height: 5.4rem
 }
 
 .btn-large {
   @extend .btn;
-  min-width: 24.7rem;
+  width: 24.7rem;
 }

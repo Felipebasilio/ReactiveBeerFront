@@ -1,6 +1,8 @@
 .product-description {
   gap: 0.8rem;
   min-height: 12.5rem;
+  flex: 1 1 100%;
+  transition: height 1.5s ease-in-out;
 
   .product-description-title {
     font-weight: 700;
@@ -13,5 +15,10 @@
     font-size: 1.4rem;
     line-height: 2.4rem;
     opacity: 0.6;
+    overflow-y: auto;
+
+    .read-more {
+      color: var(--primary-color);
+    }
   }
 }

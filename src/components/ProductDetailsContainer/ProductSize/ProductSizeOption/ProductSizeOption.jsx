@@ -1,15 +1,22 @@
 import "./ProductSizeOption.scss";
+import PropTypes from "prop-types";
+import clsx from "clsx";
 
-function ProductSizeOption() {
-  const select = () => {
-    console.log("Selecting half barrel");
-  };
-
+function ProductSizeOption({ size, isSelected, onSelect }) {
   return (
-    <a onClick={select} className="product-size-option">
-      <p>Half Barrel</p>
+    <a
+      onClick={onSelect}
+      className={clsx("product-size-option", { selected: isSelected })}
+    >
+      <p>{size}</p>
     </a>
   );
-} 
+}
+
+ProductSizeOption.propTypes = {
+  size: PropTypes.string,
+  onSelect: PropTypes.func,
+  isSelected: PropTypes.bool,
+};
 
 export default ProductSizeOption;

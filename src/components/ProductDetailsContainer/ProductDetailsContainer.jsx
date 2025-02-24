@@ -6,7 +6,6 @@ import {
   AddToBagButton,
   AddToCartButton,
 } from "./";
-import Beer from "@assets/beer.svg";
 
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,36 +19,39 @@ function ProductDetailsContainer() {
     (state) => state.app.selectedSkuProduct
   ) || { ...selectedProduct, skus: selectedProduct.skus[0] };
 
-  // 🔥 Atualizar estoque e preço a cada 5 segundos 🔥
-  // // useEffect(() => {
-  // //   if (!selectedProduct) return;
+  const handleBuyProduct = (product) => {
+    alert(JSON.stringify(product, null, 2) + " added to cart");
+  };
 
-  // //   const interval = setInterval(async () => {
-  // //     try {
-  // //       const updatedSkus = await Promise.all(
-  // //         selectedProduct.skus.map(async (sku) => {
-  // //           const response = await fetch(
-  // //             `http://localhost:3333/stock-price/${sku.code}`
-  // //           );
-  // //           if (!response.ok) return sku;
+  useEffect(() => {
+    if (!selectedProduct) return;
 
-  // //           const updatedData = await response.json();
-  // //           return {
-  // //             ...sku,
-  // //             stock: updatedData.stock,
-  // //             price: updatedData.price / 100,
-  // //           };
-  // //         })
-  // //       );
+    const interval = setInterval(async () => {
+      try {
+        const updatedSkus = await Promise.all(
+          selectedProduct.skus.map(async (sku) => {
+            const response = await fetch(
+              `http://localhost:3333/stock-price/${sku.code}`
+            );
+            if (!response.ok) return sku;
 
-  // //       dispatch(setSelectedProduct({ ...selectedProduct, skus: updatedSkus }));
-  // //     } catch (error) {
-  // //       console.error("Error updating stock and price:", error);
-  // //     }
-  // //   }, 5000);
+            const updatedData = await response.json();
+            return {
+              ...sku,
+              stock: updatedData.stock,
+              price: updatedData.price / 100,
+            };
+          })
+        );
 
-  //   return () => clearInterval(interval);
-  // }, [selectedProduct, dispatch]);
+        dispatch(setSelectedProduct({ ...selectedProduct, skus: updatedSkus }));
+      } catch (error) {
+        console.error("Error updating stock and price:", error);
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [selectedProduct, dispatch]);
 
 
   if (!selectedSkuProduct) return <p>Product not found.</p>;
@@ -79,8 +81,8 @@ function ProductDetailsContainer() {
           <ProductDescription className="mb-4" description={selectedSkuProduct.information}/>
           <ProductSize />
           <div className="d-flex gap-4 buy-product-container">
-            <AddToBagButton />
-            <AddToCartButton />
+            <AddToBagButton onClick={() => handleBuyProduct(selectedSkuProduct)}/>
+            <AddToCartButton onClick={() => handleBuyProduct(selectedSkuProduct)}/>
           </div>
         </div>
       </div>

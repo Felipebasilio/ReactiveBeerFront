@@ -37,10 +37,10 @@ ProductSize.propTypes = {
   className: PropTypes.string,
   skus: PropTypes.arrayOf(
     PropTypes.shape({
-      code: PropTypes.string.isRequired,  // Código do SKU
-      name: PropTypes.string.isRequired,  // Nome do SKU
-      stock: PropTypes.number.isRequired, // Estoque disponível
-      price: PropTypes.number.isRequired, // Preço em centavos ou decimal
+      code: PropTypes.string.isRequired, 
+      name: PropTypes.string.isRequired, 
+      stock: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
     })
   ).isRequired,
 };

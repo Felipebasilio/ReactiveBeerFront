@@ -1,12 +1,12 @@
-
 import "./AddToBagButton.scss";
-import BagIcon from "@assets/BagIcon.svg"
+import BagIcon from "@assets/BagIcon.svg";
 import { Button } from "@components";
+import PropTypes from "prop-types";
 
-function AddToBagButton() {
+function AddToBagButton({ onClick }) {
   return (
     <div className="d-flex add-to-bag-button">
-      <Button>
+      <Button onClick={onClick}>
         <a href="">
           <img
             className=""
@@ -19,6 +19,10 @@ function AddToBagButton() {
       </Button>
     </div>
   );
+}
+
+AddToBagButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default AddToBagButton;

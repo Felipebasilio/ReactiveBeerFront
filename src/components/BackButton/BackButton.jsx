@@ -1,11 +1,12 @@
 import "./BackButton.scss";
 import { Button } from "@components";
 import ArrowBackIcon from "@assets/ArrowBackIcon.svg";
+import PropTypes from 'prop-types';
 
-function BackButton() {
+function BackButton({ onClick }) {
   return (
     <div className="back-button">
-      <Button>
+      <Button onClick={onClick}>
         <a href="">
           <img
             className=""
@@ -18,6 +19,10 @@ function BackButton() {
       </Button>
     </div>
   );
+}
+
+BackButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default BackButton;

@@ -14,15 +14,16 @@
   }
 
   > img {
-    width: inherit;
-    height: auto;
+    width: auto;
+    height: 12.2rem;
     object-fit: fill;
     margin-top: 0.5rem;
     margin-bottom: 1.2rem;
   }
+
   .product-price-and-rate {
     gap: 0.8rem;
-    margin-right: 4rem;
+    padding-right: 4rem;
 
     .product-rate {
       width: 3.6rem;

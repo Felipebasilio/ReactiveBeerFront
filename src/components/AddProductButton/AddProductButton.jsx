@@ -1,11 +1,12 @@
 import "./AddProductButton.scss";
 import { Button } from "@components";
 import AddIcon from "@assets/AddIcon.svg";
+import PropTypes from 'prop-types';
 
-function AddProductButton() {
+function AddProductButton({ onClick }) {
   return (
     <div className="add-button">
-      <Button>
+      <Button onClick={onClick}>
         <a href="">
           <img
             className=""
@@ -18,6 +19,10 @@ function AddProductButton() {
       </Button>
     </div>
   );
+}
+
+AddProductButton.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default AddProductButton;

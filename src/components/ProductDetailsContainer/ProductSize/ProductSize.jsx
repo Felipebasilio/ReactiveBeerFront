@@ -2,21 +2,30 @@ import "./ProductSize.scss";
 import { ProductSizeOption } from "../";
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import { useState } from "react";
+import { setSelectedSkuProduct } from "../../../store";
+import { useSelector, useDispatch } from "react-redux";
 
-function ProductSize({ className, sizes = ["teste", "outro teste"] }) {
-  const [selectedSize, setSelectedSize] = useState(null);
+
+function ProductSize({ className }) {
+  const dispatch = useDispatch();
+
+  const selectedProduct = useSelector((state) => state.app.selectedProduct);
+  const selectedSkuProduct = useSelector((state) => state.app.selectedSkuProduct)
+
+  const handleSelectSku = (selectedSkuProduct) => {
+        dispatch(setSelectedSkuProduct(selectedSkuProduct));
+  }
 
   return (
     <div className={clsx("d-flex flex-column gap-2 product-size", className)}>
       <h4 className="product-size-title">Size</h4>
       <div className="d-flex flex-wrap product-size-option-list">
-        {sizes.map((size) => (
+        {selectedProduct.skus.map((sku) => (
           <ProductSizeOption
-            key={size}
-            size={size}
-            isSelected={selectedSize === size}
-            onSelect={() => setSelectedSize(size)}
+            key={sku.code}
+            size={sku.name}
+            isSelected={selectedSkuProduct?.skus?.code === sku.code}
+            onSelect={() => handleSelectSku({...selectedProduct, skus: sku})}
           />
         ))}
       </div>
@@ -26,7 +35,15 @@ function ProductSize({ className, sizes = ["teste", "outro teste"] }) {
 
 ProductSize.propTypes = {
   className: PropTypes.string,
-  sizes: PropTypes.arrayOf(PropTypes.string),
+  skus: PropTypes.arrayOf(
+    PropTypes.shape({
+      code: PropTypes.string.isRequired,  // Código do SKU
+      name: PropTypes.string.isRequired,  // Nome do SKU
+      stock: PropTypes.number.isRequired, // Estoque disponível
+      price: PropTypes.number.isRequired, // Preço em centavos ou decimal
+    })
+  ).isRequired,
 };
+
 
 export default ProductSize;

@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import clsx from "clsx";
 
-function ProductDescription({
-  className,
-  description = "Selling imported beer in the US with nearly 60 million cases in annual sales, growing more than 15 million cases over the past 2 years. A full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently deliveringA full flavored Mexican lager consistently delivering",
-}) {
+function ProductDescription({ className, description }) {
   const maxLength = 200;
   const [isExpanded, setIsExpanded] = useState(false);
 

@@ -1,5 +1,6 @@
 import "./AddProductButton.scss";
 import { Button } from "@components";
+import React from "react";
 import AddIcon from "@assets/AddIcon.svg";
 import PropTypes from 'prop-types';
 
